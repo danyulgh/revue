@@ -46,12 +46,12 @@ const manifest = {
   },
   content_scripts: [
     {
-      matches: ['https://example.com/*'],
-      js: ['content/example.iife.js'],
+      matches: ['https://*.edupoint.com/*GradeBook.aspx*'],
+      js: ['content/gradebook.iife.js'],
     },
     {
-      matches: ['https://example.com/*'],
-      js: ['content-ui/example.iife.js'],
+      matches: ['https://*.edupoint.com/*'],
+      js: ['content-ui/edupoint.iife.js'],
     },
     {
       matches: ['http://*/*', 'https://*/*', '<all_urls>'],
