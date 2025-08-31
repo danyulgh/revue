@@ -31,7 +31,7 @@ const manifest = {
   },
   version: packageJson.version,
   description: '__MSG_extensionDescription__',
-  host_permissions: ['https://*.edupoint.com/*', 'http://*.edupoint.com/*'],
+  host_permissions: districts.map(d => d.parentVueUrl.replace(/\/*$/, '') + '/*'),
   permissions: ['storage', 'scripting', 'tabs', 'notifications'],
   background: {
     service_worker: 'background.js',
