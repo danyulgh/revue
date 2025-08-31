@@ -2,7 +2,8 @@ import '@src/Popup.css';
 import { t } from '@extension/i18n';
 import { PROJECT_URL_OBJECT, useStorage, withErrorBoundary, withSuspense } from '@extension/shared';
 import { exampleThemeStorage } from '@extension/storage';
-import { cn, ErrorDisplay, LoadingSpinner, ToggleButton } from '@extension/ui';
+import { cn, DistrictSelect, ErrorDisplay, LoadingSpinner, ToggleButton } from '@extension/ui';
+// import { useState } from 'react';
 
 // const notificationOptions = {
 //   type: 'basic',
@@ -12,6 +13,9 @@ import { cn, ErrorDisplay, LoadingSpinner, ToggleButton } from '@extension/ui';
 // } as const;
 
 const Popup = () => {
+  // const [open, setOpen] = useState(false);
+  // const [district, setDistrict] = useState('');
+
   const { isLight } = useStorage(exampleThemeStorage);
 
   const goGithubSite = () => chrome.tabs.create(PROJECT_URL_OBJECT);
@@ -39,6 +43,7 @@ const Popup = () => {
   return (
     <div className={cn('App', isLight ? 'bg-slate-50' : 'bg-gray-800')}>
       <header className={cn('App-header', isLight ? 'text-gray-900' : 'text-gray-100')}>
+        <DistrictSelect />
         <button onClick={goGithubSite}>
           <img src={chrome.runtime.getURL('icon-34.png')} className="App-logo" alt="revue" />
         </button>
