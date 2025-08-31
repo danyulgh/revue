@@ -1,14 +1,14 @@
 import { navStorage, studentStorage } from '@extension/storage';
 
 const updateNavStorage = () => {
-  const modules: { name: string; href: string }[] = [];
+  const modules: { title: string; href: string }[] = [];
   const moduleContainer = document.querySelector('div.pxp-left-nav');
   if (moduleContainer) {
     for (const [index, module] of Array.from(moduleContainer.children).entries()) {
-      const name = module.getAttribute('data-desc');
+      const title = module.getAttribute('data-desc');
       const href = module.getAttribute('href');
       modules.push({
-        name: name ? name : `Module ${index}`,
+        title: title ? title : `Module ${index}`,
         href: href ? href : '',
       });
     }

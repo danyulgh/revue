@@ -56,7 +56,7 @@ export type ThemeStorageType = BaseStorageType<ThemeStateType> & {
 export interface NavStateType {
   origin: string;
   modules: {
-    name: string;
+    title: string;
     href: string;
   }[];
 }
@@ -72,3 +72,19 @@ export interface StudentStateType {
 }
 
 export type StudentStorageType = BaseStorageType<StudentStateType>;
+
+export interface ScheduleStateType {
+  classes: {
+    title: string;
+    room: string;
+    period: string;
+    teacher: {
+      name: string;
+      email: string;
+    };
+    term: string;
+    semester: string;
+  }[];
+}
+
+export type ScheduleStorageType = BaseStorageType<ScheduleStateType>;
