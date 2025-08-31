@@ -3,7 +3,7 @@ import { t } from '@extension/i18n';
 import { PROJECT_URL_OBJECT, useStorage, withErrorBoundary, withSuspense } from '@extension/shared';
 import { exampleThemeStorage } from '@extension/storage';
 import { Button, cn, DistrictSelect, ErrorDisplay, LoadingSpinner, ToggleButton } from '@extension/ui';
-// import { useState } from 'react';
+import { useState } from 'react';
 
 // const notificationOptions = {
 //   type: 'basic',
@@ -14,7 +14,7 @@ import { Button, cn, DistrictSelect, ErrorDisplay, LoadingSpinner, ToggleButton 
 
 const Popup = () => {
   // const [open, setOpen] = useState(false);
-  // const [district, setDistrict] = useState('');
+  const [url, setUrl] = useState('');
 
   const { isLight } = useStorage(exampleThemeStorage);
 
@@ -47,8 +47,13 @@ const Popup = () => {
           <img src={chrome.runtime.getURL('icon-34.png')} className="App-logo" alt="revue" />
         </button>
         <div className="flex w-full justify-center gap-4">
-          <DistrictSelect />
-          <Button className="bg-black" />
+          <DistrictSelect url={url} setUrl={setUrl} />
+          <Button
+            className="bg-black"
+            onClick={() => {
+              if (url) chrome.tabs.create({ url });
+            }}
+          />
         </div>
         <p>
           Edit <code>pages/popup/src/Popup.tsx</code>
