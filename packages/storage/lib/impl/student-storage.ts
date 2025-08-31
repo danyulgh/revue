@@ -4,11 +4,11 @@ import type { StudentStateType, StudentStorageType } from '../base/index.js';
 const storage = createStorage<StudentStateType>(
   'student-storage-key',
   {
-    name: 'Student Name',
-    sid: '1234567890',
+    name: '',
+    sid: '',
     photo: '',
     school: '',
-    district: 'Montgomery County Public School',
+    district: 'Montgomery County Public Schools',
   },
   {
     storageEnum: StorageEnum.Local,

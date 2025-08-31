@@ -46,7 +46,7 @@ const manifest = {
   },
   content_scripts: [
     {
-      matches: districts.map(d => d.parentVueUrl.replace(/\/*$/, '') + '/*GradeBook'),
+      matches: districts.map(d => d.parentVueUrl.replace(/\/*$/, '') + '/*GradeBook.aspx*'),
       js: ['content/gradebook.iife.js'],
     },
     {
@@ -55,7 +55,7 @@ const manifest = {
       css: ['content.css'],
     },
     {
-      matches: districts.map(d => d.parentVueUrl.replace(/\/$/, '') + '/*LaunchPad*'),
+      matches: districts.map(d => d.parentVueUrl.replace(/\/$/, '') + '/*LaunchPad.aspx*'),
       js: ['content/launchpad.iife.js'],
     },
   ],

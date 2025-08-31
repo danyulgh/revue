@@ -82,9 +82,28 @@ export interface ScheduleStateType {
       name: string;
       email: string;
     };
-    term: string;
-    semester: string;
+    term: number;
+    semester: number;
   }[];
 }
 
 export type ScheduleStorageType = BaseStorageType<ScheduleStateType>;
+
+export interface GradebookStateType {
+  classes: {
+    title: string;
+    quarter: string;
+    percent: number;
+    assignments: {
+      title: string;
+      category: string;
+      weight: number;
+      pointsPossible: number;
+      points: number;
+      date: string;
+      userAdded: boolean;
+    }[];
+  }[];
+}
+
+export type GradebookStorageType = BaseStorageType<GradebookStateType>;

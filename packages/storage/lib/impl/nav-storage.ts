@@ -7,51 +7,51 @@ const storage = createStorage<NavStateType>(
     origin: 'https://md-mcps-psv.edupoint.com/',
     modules: [
       {
-        name: 'Home',
+        title: 'Home',
         href: 'PXP2_LaunchPad.aspx',
       },
       {
-        name: 'Synergy Mail',
+        title: 'Synergy Mail',
         href: 'PXP2_Messages.aspx',
       },
       {
-        name: 'Calendar',
+        title: 'Calendar',
         href: 'PXP2_Calendar.aspx',
       },
       {
-        name: 'Attendance',
+        title: 'Attendance',
         href: 'PXP2_Attendance.aspx',
       },
       {
-        name: 'Class Schedule',
+        title: 'Class Schedule',
         href: 'PXP2_ClassSchedule.aspx',
       },
       {
-        name: 'Conference',
+        title: 'Conference',
         href: 'PXP2_Conference.aspx',
       },
       {
-        name: 'Course History',
+        title: 'Course History',
         href: 'PXP2_CourseHistory.aspx',
       },
       {
-        name: 'Gradebook',
+        title: 'Gradebook',
         href: 'PXP2_Gradebook.aspx',
       },
       {
-        name: 'Report Card',
+        title: 'Report Card',
         href: 'PXP2_ReportCard.aspx',
       },
       {
-        name: 'School Information',
+        title: 'School Information',
         href: 'PXP2_SchoolInformation.aspx',
       },
       {
-        name: 'Student Info',
+        title: 'Student Info',
         href: 'PXP2_Student.aspx',
       },
       {
-        name: 'Documents',
+        title: 'Documents',
         href: 'PXP2_Documents.aspx',
       },
     ],
