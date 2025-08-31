@@ -46,13 +46,17 @@ const manifest = {
   },
   content_scripts: [
     {
-      matches: districts.map(d => d.parentVueUrl.replace(/\/*$/, '') + '/*'),
+      matches: districts.map(d => d.parentVueUrl.replace(/\/*$/, '') + '/*GradeBook'),
       js: ['content/gradebook.iife.js'],
     },
     {
       matches: districts.map(d => d.parentVueUrl.replace(/\/*$/, '') + '/*'),
       js: ['content-ui/all.iife.js'],
       css: ['content.css'],
+    },
+    {
+      matches: districts.map(d => d.parentVueUrl.replace(/\/$/, '') + '/*LaunchPad*'),
+      js: ['content/launchpad.iife.js'],
     },
   ],
   web_accessible_resources: [

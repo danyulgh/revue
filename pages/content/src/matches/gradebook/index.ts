@@ -1,31 +1,26 @@
-const targetId = 'ctl00_ctl00_MainContent_PXPMainContent_CourseContentHeaderLink';
-const MARKER = '__back_reload_marker__';
+const classbookTargetId = 'ctl00_ctl00_MainContent_PXPMainContent_CourseContentHeaderLink';
+const classbookMARKER = '__back_reload_marker__';
 
 const isClassbook = function () {
-  const targetElement = document.getElementById(targetId);
+  const targetElement = document.getElementById(classbookTargetId);
   if (targetElement) {
     return window.getComputedStyle(targetElement).display === 'none';
-  } else return false;
+  }
+  return false;
 };
 
-const isTargetMutation = function (mutation: MutationRecord) {
-  return mutation.target instanceof HTMLElement && mutation.target.id === targetId;
-};
-
-const observer = new MutationObserver(mutations => {
-  for (const mutation of mutations) {
-    if (isTargetMutation(mutation) && isClassbook()) {
-      history.pushState({ [MARKER]: true }, '');
-      return;
-    }
+const gradebookObserver = new MutationObserver(() => {
+  if (isClassbook()) {
+    history.pushState({ [classbookMARKER]: true }, '');
+    gradebookObserver.disconnect();
   }
 });
 
-observer.observe(document.body, { subtree: true, childList: true, attributes: true });
+gradebookObserver.observe(document.body, { subtree: true, childList: true, attributes: true });
 
 window.addEventListener('popstate', event => {
   console.log('popstate fired');
-  if (!event.state?.[MARKER]) {
+  if (!event.state?.[classbookMARKER]) {
     location.reload();
   }
 });
