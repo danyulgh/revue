@@ -13,7 +13,6 @@ import { cn, ErrorDisplay, LoadingSpinner, ToggleButton } from '@extension/ui';
 
 const Popup = () => {
   const { isLight } = useStorage(exampleThemeStorage);
-  const logo = isLight ? 'popup/logo_vertical.svg' : 'popup/logo_vertical_dark.svg';
 
   const goGithubSite = () => chrome.tabs.create(PROJECT_URL_OBJECT);
 
@@ -41,7 +40,7 @@ const Popup = () => {
     <div className={cn('App', isLight ? 'bg-slate-50' : 'bg-gray-800')}>
       <header className={cn('App-header', isLight ? 'text-gray-900' : 'text-gray-100')}>
         <button onClick={goGithubSite}>
-          <img src={chrome.runtime.getURL(logo)} className="App-logo" alt="logo" />
+          <img src={chrome.runtime.getURL('icon-34.png')} className="App-logo" alt="revue" />
         </button>
         <p>
           Edit <code>pages/popup/src/Popup.tsx</code>
