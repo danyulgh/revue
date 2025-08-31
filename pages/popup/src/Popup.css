@@ -10,7 +10,7 @@
 }
 
 .App-logo {
-  height: 25vmin;
+  height: 15vmin;
   margin-bottom: 1rem;
 }
 
@@ -19,7 +19,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
   font-size: 0.75rem;
 }
 

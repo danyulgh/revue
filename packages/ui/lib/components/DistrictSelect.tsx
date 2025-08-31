@@ -20,14 +20,14 @@ export const DistrictSelect = () => {
   return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
-        <Button variant="outline" role="combobox" aria-expanded={open} className="w-[230px] justify-between">
+        <Button variant="outline" role="combobox" aria-expanded={open} className="w-[210px] justify-between">
           <span className="max-w-[calc(100%-1.5rem)] truncate">
             {value ? districts.find(district => district.name === value)?.name : 'Select district...'}
           </span>
           <ChevronsUpDownIcon className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-[230px] p-0">
+      <PopoverContent className="w-[210px] p-0">
         <Command>
           <CommandInput placeholder="Search framework..." />
           <CommandList>
