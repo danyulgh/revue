@@ -31,7 +31,7 @@ const manifest = {
   },
   version: packageJson.version,
   description: '__MSG_extensionDescription__',
-  host_permissions: districts.map(d => d.parentVueUrl.replace(/\/*$/, '') + '/*'),
+  host_permissions: districts.map(d => d.url.replace(/\/*$/, '') + '/*'),
   permissions: ['storage', 'scripting', 'tabs', 'notifications'],
   background: {
     service_worker: 'background.js',
@@ -46,16 +46,16 @@ const manifest = {
   },
   content_scripts: [
     {
-      matches: districts.map(d => d.parentVueUrl.replace(/\/*$/, '') + '/*GradeBook.aspx*'),
+      matches: districts.map(d => d.url.replace(/\/*$/, '') + '/*GradeBook.aspx*'),
       js: ['content/gradebook.iife.js', 'content-ui/gradebook.iife.js'],
     },
     {
-      matches: districts.map(d => d.parentVueUrl.replace(/\/*$/, '') + '/*'),
+      matches: districts.map(d => d.url.replace(/\/*$/, '') + '/*'),
       js: ['content-ui/all.iife.js', 'content/all.iife.js'],
       css: ['content.css'],
     },
     {
-      matches: districts.map(d => d.parentVueUrl.replace(/\/$/, '') + '/*LaunchPad.aspx*'),
+      matches: districts.map(d => d.url.replace(/\/$/, '') + '/*LaunchPad.aspx*'),
       js: ['content/launchpad.iife.js'],
     },
   ],
