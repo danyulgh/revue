@@ -52,3 +52,23 @@ export interface ThemeStateType {
 export type ThemeStorageType = BaseStorageType<ThemeStateType> & {
   toggle: () => Promise<void>;
 };
+
+export interface NavStateType {
+  origin: string;
+  modules: {
+    name: string;
+    href: string;
+  }[];
+}
+
+export type NavStorageType = BaseStorageType<NavStateType>;
+
+export interface StudentStateType {
+  name: string;
+  sid: string;
+  photo: string;
+  school: string;
+  district: string;
+}
+
+export type StudentStorageType = BaseStorageType<StudentStateType>;
