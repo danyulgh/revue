@@ -1,8 +1,3 @@
-// const launchpadObserver = new MutationObserver(() => {
-//   if
-// });
-
-// launchpadObserver.observe(document.body, { subtree: true, childList: true, attributes: true });
 const district = document.getElementById('DistrictName')?.innerText?.trim();
 console.log(district);
 const school = document.querySelector('div.school[data-bind="text: school"]')?.textContent;
@@ -15,3 +10,10 @@ const studentName = document.getElementById('Greeting')?.innerText?.match(/, ([^
 if (studentName) console.log(studentName[1]);
 const photoUrl = `${location.origin}/${document.querySelector('img[alt="Student Photo"]')?.getAttribute('src')}`;
 console.log(photoUrl);
+
+const modules = document.querySelector('div.pxp-left-nav')?.children;
+if (modules) {
+  for (const module of modules) {
+    console.log(module.getAttribute('href'), module.getAttribute('data-desc'));
+  }
+}
