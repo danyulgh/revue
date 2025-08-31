@@ -1,3 +1,4 @@
+import { districts } from '@extension/shared';
 import { readFileSync } from 'node:fs';
 import type { ManifestType } from '@extension/shared';
 
@@ -31,8 +32,7 @@ const manifest = {
   version: packageJson.version,
   description: '__MSG_extensionDescription__',
   host_permissions: ['https://*.edupoint.com/*', 'http://*.edupoint.com/*'],
-  permissions: ['storage', 'scripting', 'tabs', 'notifications', 'sidePanel'],
-  options_page: 'options/index.html',
+  permissions: ['storage', 'scripting', 'tabs', 'notifications'],
   background: {
     service_worker: 'background.js',
     type: 'module',
@@ -46,15 +46,12 @@ const manifest = {
   },
   content_scripts: [
     {
-      matches: ['https://*.edupoint.com/*GradeBook.aspx*'],
+      matches: districts.map(d => d.parentVueUrl.replace(/\/*$/, '') + '/*'),
       js: ['content/gradebook.iife.js'],
     },
     {
-      matches: ['https://*.edupoint.com/*'],
-      js: ['content-ui/edupoint.iife.js'],
-    },
-    {
-      matches: ['http://*/*', 'https://*/*', '<all_urls>'],
+      matches: districts.map(d => d.parentVueUrl.replace(/\/*$/, '') + '/*'),
+      js: ['content-ui/all.iife.js'],
       css: ['content.css'],
     },
   ],
@@ -64,9 +61,6 @@ const manifest = {
       matches: ['*://*/*'],
     },
   ],
-  side_panel: {
-    default_path: 'side-panel/index.html',
-  },
 } satisfies ManifestType;
 
 export default manifest;

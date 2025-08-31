@@ -39,7 +39,7 @@ export const districts: {
     name: 'Aguila Elementary School District #63',
   },
   {
-    parentVueUrl: 'HTTPS://sis-psvue1.tnk12.gov/ALCS',
+    parentVueUrl: 'https://sis-psvue1.tnk12.gov/ALCS',
     address: 'Alamo TN 38001',
     name: 'Alamo City School',
   },
@@ -334,7 +334,7 @@ export const districts: {
     name: 'Benton Area School District',
   },
   {
-    parentVueUrl: 'HTTPS://sis-psvue1.tnk12.gov/BENCS',
+    parentVueUrl: 'https://sis-psvue1.tnk12.gov/BENCS',
     address: 'Camden TN 38320',
     name: 'Benton County Schools',
   },
@@ -409,7 +409,7 @@ export const districts: {
     name: 'Bradley Academy of Excellence',
   },
   {
-    parentVueUrl: 'HTTPS://sis-psvue2.tnk12.gov/BCS',
+    parentVueUrl: 'https://sis-psvue2.tnk12.gov/BCS',
     address: 'Cleveland TN 37311',
     name: 'Bradley County Schools',
   },
@@ -579,7 +579,7 @@ export const districts: {
     name: 'Chesapeake Public Schools',
   },
   {
-    parentVueUrl: 'HTTPS://sis-psvue1.tnk12.gov/CHCS',
+    parentVueUrl: 'https://sis-psvue1.tnk12.gov/CHCS',
     address: 'Henderson TN 38340',
     name: 'Chester County Schools',
   },
@@ -779,7 +779,7 @@ export const districts: {
     name: 'Creighton School District',
   },
   {
-    parentVueUrl: 'HTTPS://sis-psvue1.tnk12.gov/CCS',
+    parentVueUrl: 'https://sis-psvue1.tnk12.gov/CCS',
     address: 'Alamo TN 38001',
     name: 'Crockett County Schools',
   },
@@ -829,7 +829,7 @@ export const districts: {
     name: 'Dayville School District',
   },
   {
-    parentVueUrl: 'HTTPS://sis-psvue1.tnk12.gov/DECCS',
+    parentVueUrl: 'https://sis-psvue1.tnk12.gov/DECCS',
     address: 'Decaturville TN 38329',
     name: 'Decatur County Schools',
   },
@@ -894,12 +894,12 @@ export const districts: {
     name: 'Dugsi Academy Charter School',
   },
   {
-    parentVueUrl: 'HTTPS://sis-psvue1.tnk12.gov/DCS',
+    parentVueUrl: 'https://sis-psvue1.tnk12.gov/DCS',
     address: 'Dyersburg TN 38024',
     name: 'Dyer County Schools',
   },
   {
-    parentVueUrl: 'HTTPS://sis-psvue1.tnk12.gov/DYCS',
+    parentVueUrl: 'https://sis-psvue1.tnk12.gov/DYCS',
     address: 'Dyersburg TN 38024',
     name: 'Dyersburg City Schools',
   },
@@ -1034,7 +1034,7 @@ export const districts: {
     name: 'Estrella Educational Foundation',
   },
   {
-    parentVueUrl: 'HTTPS://sis-psvue2.tnk12.gov/ECS',
+    parentVueUrl: 'https://sis-psvue2.tnk12.gov/ECS',
     address: 'Etowah TN 37331',
     name: 'Etowah City School',
   },
@@ -1304,7 +1304,7 @@ export const districts: {
     name: 'Gordon Bernell Charter School',
   },
   {
-    parentVueUrl: 'HTTPS://sis-psvue2.tnk12.gov/GCS',
+    parentVueUrl: 'https://sis-psvue2.tnk12.gov/GCS',
     address: 'Rutledge TN 37861',
     name: 'Grainger County Schools',
   },
@@ -1414,7 +1414,7 @@ export const districts: {
     name: 'Hanford Elementary School District',
   },
   {
-    parentVueUrl: 'HTTPS://sis-psvue1.tnk12.gov/HACS',
+    parentVueUrl: 'https://sis-psvue1.tnk12.gov/HACS',
     address: 'Bolivar TN 38008',
     name: 'Hardeman County Schools',
   },
@@ -1464,12 +1464,12 @@ export const districts: {
     name: 'Helix School District',
   },
   {
-    parentVueUrl: 'HTTPS://sis-psvue1.tnk12.gov/HENCS',
+    parentVueUrl: 'https://sis-psvue1.tnk12.gov/HENCS',
     address: 'Lexington TN 38351',
     name: 'Henderson County Schools',
   },
   {
-    parentVueUrl: 'HTTPS://sis-psvue1.tnk12.gov/HCS',
+    parentVueUrl: 'https://sis-psvue1.tnk12.gov/HCS',
     address: 'Paris TN 38242',
     name: 'Henry County Schools',
   },
@@ -1974,7 +1974,7 @@ export const districts: {
     name: 'Lowell School District',
   },
   {
-    parentVueUrl: 'studentvue.geneseeisd.org/loyola',
+    parentVueUrl: 'https://studentvue.geneseeisd.org/loyola',
     address: 'Detroit MI 48238',
     name: 'Loyola High School',
   },
@@ -2014,7 +2014,7 @@ export const districts: {
     name: 'Maricopa Unified School District #20',
   },
   {
-    parentVueUrl: 'HTTPS://sis-psvue1.tnk12.gov/MARCS',
+    parentVueUrl: 'https://sis-psvue1.tnk12.gov/MARCS',
     address: 'Jasper TN 37347',
     name: 'Marion County Schools',
   },
@@ -2049,7 +2049,7 @@ export const districts: {
     name: 'McCabe Elementary',
   },
   {
-    parentVueUrl: 'HTTPS://sis-psvue2.tnk12.gov/MCCS',
+    parentVueUrl: 'https://sis-psvue2.tnk12.gov/MCCS',
     address: 'Athens TN 37303',
     name: 'McMinn County Schools',
   },
@@ -2074,7 +2074,7 @@ export const districts: {
     name: 'Medford School District',
   },
   {
-    parentVueUrl: 'HTTPS://sis-psvue2.tnk12.gov/MCS',
+    parentVueUrl: 'https://sis-psvue2.tnk12.gov/MCS',
     address: 'Decatur TN 37322',
     name: 'Meigs County Schools',
   },
@@ -2184,7 +2184,7 @@ export const districts: {
     name: 'Molalla River School District',
   },
   {
-    parentVueUrl: 'HTTPS://sis-psvue2.tnk12.gov/MONCS',
+    parentVueUrl: 'https://sis-psvue2.tnk12.gov/MONCS',
     address: 'Madisonville TN 37354',
     name: 'Monroe County Schools',
   },
@@ -2444,7 +2444,7 @@ export const districts: {
     name: 'Oakland Academy',
   },
   {
-    parentVueUrl: 'HTTPS://sis-psvue1.tnk12.gov/OCS',
+    parentVueUrl: 'https://sis-psvue1.tnk12.gov/OCS',
     address: 'Union City TN 38261',
     name: 'Obion County Schools',
   },
@@ -2729,7 +2729,7 @@ export const districts: {
     name: 'Polaris Academy',
   },
   {
-    parentVueUrl: 'HTTPS://sis-psvue2.tnk12.gov/PCS',
+    parentVueUrl: 'https://sis-psvue2.tnk12.gov/PCS',
     address: 'Benton TN 37307',
     name: 'Polk County Schools',
   },
@@ -2924,7 +2924,7 @@ export const districts: {
     name: 'Riverside Elementary School District',
   },
   {
-    parentVueUrl: 'HTTPS://sis-psvue2.tnk12.gov/RCS',
+    parentVueUrl: 'https://sis-psvue2.tnk12.gov/RCS',
     address: 'Kingston TN 37763',
     name: 'Roane County Schools',
   },
@@ -3349,7 +3349,7 @@ export const districts: {
     name: 'Sweet Home School District',
   },
   {
-    parentVueUrl: 'HTTPS://sis-psvue2.tnk12.gov/SCS',
+    parentVueUrl: 'https://sis-psvue2.tnk12.gov/SCS',
     address: 'Sweetwater TN 37874',
     name: 'Sweetwater City Schools',
   },
@@ -3479,7 +3479,7 @@ export const districts: {
     name: 'Topock Elementary School',
   },
   {
-    parentVueUrl: 'HTTPS://sis-psvue1.tnk12.gov/TSSD',
+    parentVueUrl: 'https://sis-psvue1.tnk12.gov/TSSD',
     address: 'Trenton TN 38382',
     name: 'Trenton Special School District',
   },
@@ -3559,7 +3559,7 @@ export const districts: {
     name: 'Vallecitos District Office',
   },
   {
-    parentVueUrl: 'HTTPS://sis-psvue1.tnk12.gov/VBCS',
+    parentVueUrl: 'https://sis-psvue1.tnk12.gov/VBCS',
     address: 'Spencer TN 38585',
     name: 'Van Buren County Schools',
   },
@@ -3649,7 +3649,7 @@ export const districts: {
     name: 'Wayne County Schools',
   },
   {
-    parentVueUrl: 'HTTPS://sis-psvue1.tnk12.gov/WCS',
+    parentVueUrl: 'https://sis-psvue1.tnk12.gov/WCS',
     address: 'Dresden TN 38225',
     name: 'Weakley County Schools',
   },
@@ -3699,7 +3699,7 @@ export const districts: {
     name: 'White Pigeon Community Schools',
   },
   {
-    parentVueUrl: 'HTTPS://PSPortal.wusd.us',
+    parentVueUrl: 'https://PSPortal.wusd.us',
     address: 'Whiteriver AZ 85941',
     name: 'Whiteriver Unified School District',
   },
