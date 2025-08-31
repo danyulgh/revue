@@ -1,4 +1,7 @@
+import { shortCircuit } from '@extension/shared';
 import { navStorage, studentStorage } from '@extension/storage';
+
+shortCircuit();
 
 const updateNavStorage = () => {
   const modules: { title: string; href: string }[] = [];
@@ -44,6 +47,3 @@ const updateStudentStorage = () => {
 
 updateNavStorage();
 updateStudentStorage();
-
-console.log(navStorage.get());
-console.log(studentStorage.get());

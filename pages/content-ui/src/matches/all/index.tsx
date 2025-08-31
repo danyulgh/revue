@@ -1,6 +1,8 @@
 import inlineCss from '../../../dist/all/index.css?inline';
-import { initAppWithShadow, initComponentWithShadow } from '@extension/shared';
+import { initAppWithShadow, initComponentWithShadow, shortCircuit } from '@extension/shared';
 import App from '@src/matches/all/App';
+
+shortCircuit();
 
 initAppWithShadow({ id: 'CEB-extension-example', app: <App />, inlineCss });
 const observer = new MutationObserver(() => {

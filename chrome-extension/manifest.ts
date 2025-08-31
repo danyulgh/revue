@@ -47,11 +47,11 @@ const manifest = {
   content_scripts: [
     {
       matches: districts.map(d => d.parentVueUrl.replace(/\/*$/, '') + '/*GradeBook.aspx*'),
-      js: ['content/gradebook.iife.js'],
+      js: ['content/gradebook.iife.js', 'content-ui/gradebook.iife.js'],
     },
     {
       matches: districts.map(d => d.parentVueUrl.replace(/\/*$/, '') + '/*'),
-      js: ['content-ui/all.iife.js'],
+      js: ['content-ui/all.iife.js', 'content/all.iife.js'],
       css: ['content.css'],
     },
     {

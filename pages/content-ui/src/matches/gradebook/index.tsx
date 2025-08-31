@@ -1,19 +1,21 @@
 import inlineCss from '../../../dist/gradebook/index.css?inline';
-import { initAppWithShadow, initComponentWithShadow } from '@extension/shared';
+import { initAppWithShadow, initComponentWithShadow, shortCircuit } from '@extension/shared';
 import App from '@src/matches/gradebook/App';
 
-initAppWithShadow({ id: 'CEB-extension-example', app: <App />, inlineCss });
-const observer = new MutationObserver(() => {
+shortCircuit();
+
+initAppWithShadow({ id: 'CEB-extensionaaaa-example', app: <App />, inlineCss });
+const gradebookObserver = new MutationObserver(() => {
   if (document.querySelector('#ctl00_ctl00_DebugInfo')) {
     initComponentWithShadow({
-      id: 'CEB-extension-example2',
+      id: 'CEB-extension-example27',
       app: <App />,
       inlineCss,
-      placement: 'beforebegin',
-      target: 'div.container',
+      placement: 'child',
+      target: '#ctl00_ctl00_DebugInfo',
     });
-    observer.disconnect();
+    gradebookObserver.disconnect();
   }
 });
 
-observer.observe(document.body, { subtree: true, childList: true });
+gradebookObserver.observe(document.body, { subtree: true, childList: true });

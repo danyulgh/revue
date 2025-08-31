@@ -1,3 +1,7 @@
+import { shortCircuit } from '@extension/shared';
+
+shortCircuit();
+
 const classbookTargetId = 'ctl00_ctl00_MainContent_PXPMainContent_CourseContentHeaderLink';
 const classbookMARKER = '__back_reload_marker__';
 
@@ -9,14 +13,14 @@ const isClassbook = function () {
   return false;
 };
 
-const gradebookObserver = new MutationObserver(() => {
+const observer = new MutationObserver(() => {
   if (isClassbook()) {
     history.pushState({ [classbookMARKER]: true }, '');
-    gradebookObserver.disconnect();
+    observer.disconnect();
   }
 });
 
-gradebookObserver.observe(document.body, { subtree: true, childList: true, attributes: true });
+observer.observe(document.body, { subtree: true, childList: true, attributes: true });
 
 window.addEventListener('popstate', event => {
   console.log('popstate fired');
