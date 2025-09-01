@@ -11,7 +11,7 @@ export const ToggleButton = ({ className, children, ...props }: ToggleButtonProp
   return (
     <button
       className={cn(
-        'mt-4 rounded border-2 px-4 py-1 font-bold shadow hover:scale-105',
+        'rounded border-2 px-4 py-1 font-bold shadow hover:scale-105',
         isLight ? 'border-black bg-white text-black' : 'border-white bg-black text-white',
         className,
       )}
