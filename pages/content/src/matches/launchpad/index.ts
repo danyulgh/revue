@@ -29,7 +29,7 @@ const updateStudentStorage = () => {
     .querySelector('span.student-id[data-bind="text: \'ID: \' + sisNumber"]')
     ?.textContent?.match(/ID:\s*(\d+)/);
 
-  const photoElement = document.querySelector('img[alt="Student Photo"]');
+  const photoElement = document.querySelector('img[data-bind="attr: { src: photoUrl, alt: name }"]');
   const photo = photoElement instanceof HTMLImageElement ? convertImageElementToBase64(photoElement) : '';
 
   const school = document.querySelector('div.school[data-bind="text: school"]')?.textContent;
@@ -47,7 +47,10 @@ const updateStudentStorage = () => {
 };
 
 const launchpadObserver = new MutationObserver(() => {
-  if (document.querySelector('div.pxp-left-nav') && document.querySelector('img[alt="Student Photo"]')) {
+  if (
+    document.querySelector('div.pxp-left-nav') &&
+    document.querySelector('img[data-bind="attr: { src: photoUrl, alt: name }"]')
+  ) {
     updateNavStorage();
     updateStudentStorage();
     launchpadObserver.disconnect();
