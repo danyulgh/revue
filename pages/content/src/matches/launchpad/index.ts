@@ -46,5 +46,12 @@ const updateStudentStorage = () => {
   });
 };
 
-updateNavStorage();
-updateStudentStorage();
+const launchpadObserver = new MutationObserver(() => {
+  if (document.querySelector('div.pxp-left-nav') && document.querySelector('img[alt="Student Photo"]')) {
+    updateNavStorage();
+    updateStudentStorage();
+    launchpadObserver.disconnect();
+  }
+});
+
+launchpadObserver.observe(document.body, { subtree: true, childList: true, attributes: true });

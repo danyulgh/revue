@@ -51,7 +51,7 @@ const manifest = {
     },
     {
       matches: districts.map(d => d.url.replace(/\/*$/, '') + '/*'),
-      js: ['content-ui/all.iife.js', 'content/all.iife.js'],
+      js: ['content-ui/all.iife.js'],
       css: ['content.css'],
     },
     {
