@@ -51,7 +51,7 @@ const manifest = {
     },
     {
       matches: districts.map(d => d.url.replace(/\/*$/, '') + '/*'),
-      js: ['content-ui/all.iife.js'],
+      js: ['content-ui/all.iife.js', 'content/all.iife.js'],
       css: ['content.css'],
     },
     {
@@ -61,7 +61,7 @@ const manifest = {
   ],
   web_accessible_resources: [
     {
-      resources: ['*.js', '*.css', '*.svg', 'icon-128.png', 'icon-34.png'],
+      resources: ['*.js', '*.css', '*.svg', 'icon-128.png', 'icon-34.png', '*.ttf'],
       matches: ['*://*/*'],
     },
   ],

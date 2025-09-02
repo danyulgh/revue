@@ -1,1 +1,3 @@
-console.log('[CEB] Example content script loaded');
+import { initFont } from '@extension/shared';
+
+initFont();

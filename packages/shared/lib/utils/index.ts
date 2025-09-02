@@ -5,4 +5,5 @@ export * from './init-component-with-shadow.js';
 export * from './districts.js';
 export * from './short-circuit.js';
 export * from './image-convert.js';
+export * from './init-css.js';
 export type * from './types.js';
