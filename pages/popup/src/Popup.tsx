@@ -15,19 +15,25 @@ const Popup = () => {
   return (
     <div className={cn('App', isLight ? 'bg-slate-50' : 'bg-gray-800')}>
       <header className={cn('App-header gap-4', isLight ? 'text-gray-900' : 'text-gray-100')}>
-        <div className="flex w-full flex-row items-start justify-between">
+        <div className="flex w-full flex-row items-center justify-between">
           <button onClick={goGithubSite}>
             <img src={chrome.runtime.getURL('icon-34.png')} className="App-logo" alt="revue" />
           </button>
           <p>Welcome{name ? `, ${name}` : ''}!</p>
-          {photo && <img src={photo} alt="student" className="App-logo" />}
+          {photo && (
+            <img
+              src={photo}
+              alt="student"
+              className="h-[15vmin] w-[15vmin] rounded-full border-2 border-white object-cover"
+            />
+          )}
         </div>
         <div className="flex w-full justify-center gap-4">
           <DistrictSelect />
           <Button
             className="bg-black"
             onClick={() => {
-              chrome.tabs.create({ url: origin });
+              chrome.tabs.create({ url: `${origin.replace(/\/*$/, '/')}PXP2_LaunchPad.aspx` });
             }}
           />
         </div>
