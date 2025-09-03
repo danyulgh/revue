@@ -17,17 +17,22 @@ const tags: string[] = [
 ];
 
 export const initFont = () => {
-  const fontUrl = chrome.runtime.getURL('fonts/PixelifySans-VariableFont.ttf');
+  const fontUrl = chrome.runtime.getURL('fonts/MinecraftRegular.otf');
+  const imageUrl = chrome.runtime.getURL('icon-128.png');
 
   const style = document.createElement('style');
   style.id = 'REVUEREVUEREVUE';
   style.textContent = `
     @font-face {
       font-family: "Pixelify Sans";
-      src: url("${fontUrl}") format("truetype");
+      src: url("${fontUrl}") format("opentype");
       font-weight: normal;
       font-style: normal;
       font-display: swap;
+    }
+
+    body {
+      background-image: url("${imageUrl}") !important;
     }
   `;
 
