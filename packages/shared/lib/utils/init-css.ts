@@ -1,5 +1,23 @@
+const tags: string[] = [
+  'body',
+  '#DistrictName',
+  '.student-name',
+  '#messageGrid',
+  '#ctl00_ctl00_MainContent_PXPMainContent_ctl00',
+  '#ctl00_ctl00_MainContent_PXPMainContent_ctl08',
+  '#ctl00_ctl00_MainContent_PXPMainContent_ServiceLearningGrid',
+  '#ctl00_ctl00_MainContent_PXPMainContent_ServiceLearningGridDetails',
+  '#ctl00_ctl00_MainContent_PXPMainContent_StaffGrid',
+  '#ctl00_ctl00_MainContent_PXPMainContent_DocumentsGrid',
+  '#AssignmentsGrid',
+  '.dx-texteditor-input',
+  '.dx-button-text',
+  '.dx-item-content',
+  '[data-dx_placeholder]',
+];
+
 export const initFont = () => {
-  const fontUrl = chrome.runtime.getURL('PixelifySans-VariableFont_wght.ttf');
+  const fontUrl = chrome.runtime.getURL('fonts/PixelifySans-VariableFont.ttf');
 
   const style = document.createElement('style');
   style.id = 'REVUEREVUEREVUE';
@@ -11,18 +29,15 @@ export const initFont = () => {
       font-style: normal;
       font-display: swap;
     }
+  `;
 
-    body {
+  for (const tag of tags) {
+    style.textContent += `
+    ${tag}{
       font-family: 'Pixelify Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
     }
+    `;
+  }
 
-    .student-name {
-      font-family: 'Pixelify Sans' !important;
-    }
-
-    #DistrictName {
-      font-family: 'Pixelify Sans' !important;
-    }
-  `;
   document.head.appendChild(style);
 };
