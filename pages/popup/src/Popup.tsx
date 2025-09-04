@@ -1,16 +1,15 @@
 import '@src/Popup.css';
 import { PROJECT_URL_OBJECT, useStorage, withErrorBoundary, withSuspense } from '@extension/shared';
-import { navStorage, studentStorage } from '@extension/storage';
-import { Button, cn, DistrictSelect, ErrorDisplay, LoadingSpinner } from '@extension/ui';
+import { studentStorage } from '@extension/storage';
+import { cn, DistrictSelect, ErrorDisplay, LoadingSpinner } from '@extension/ui';
 
 const Popup = () => {
-  const { origin } = useStorage(navStorage);
   const { name, photo } = useStorage(studentStorage);
 
   const goGithubSite = () => chrome.tabs.create(PROJECT_URL_OBJECT);
   return (
-    <div className={cn('App bg-gray-800')}>
-      <header className={cn('App-header gap-4 text-gray-100')}>
+    <div className={cn('App text-foreground')}>
+      <header className={cn('App-header gap-4')}>
         <div className="flex w-full flex-row items-center justify-between">
           <button onClick={goGithubSite}>
             <img src={chrome.runtime.getURL('icon-34.png')} className="App-logo" alt="revue" />
@@ -20,17 +19,12 @@ const Popup = () => {
             <img
               src={photo}
               alt="student"
-              className="h-[15vmin] w-[15vmin] rounded-full border-2 border-white object-cover"
+              className="border-input h-[15vmin] w-[15vmin] rounded-full border object-cover"
             />
           )}
         </div>
         <div className="flex w-full justify-center gap-4">
           <DistrictSelect />
-          <Button
-            onClick={() => {
-              chrome.tabs.create({ url: `${origin.replace(/\/*$/, '/')}PXP2_LaunchPad.aspx` });
-            }}
-          />
         </div>
       </header>
     </div>
