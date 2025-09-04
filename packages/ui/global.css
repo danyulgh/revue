@@ -30,7 +30,7 @@
     --destructive-foreground: 43.3 96.4% 56.3%;
     --border: 43.3 96.4% 56.3%;
     --input: 0 0% 25.1%;
-    --ring: 273.5 86.9% 21%;
+    --ring: 263.4 69.3% 42.2%;
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
@@ -40,8 +40,13 @@
   }
 }
 
+:root {
+  scrollbar-color: hsl(0 0% 25.1%) hsl(0 0% 9%);
+}
+
 body {
   @apply bg-background;
+
   margin: 0;
   padding: 0;
   box-sizing: border-box;
