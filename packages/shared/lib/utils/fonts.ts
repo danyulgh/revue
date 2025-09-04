@@ -19,7 +19,15 @@ export const fonts: {
   file: string;
 }[] = [
   {
-    name: 'Pixelify Sans',
-    file: 'PixelifySans-VariableFont.ttf',
+    name: 'Figtree',
+    file: 'Figtree-VariableFont.ttf',
+  },
+  {
+    name: 'Minecraft',
+    file: 'MinecraftRegular.otf',
+  },
+  {
+    name: 'Papyrus',
+    file: 'Papyrus.ttf',
   },
 ];

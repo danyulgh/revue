@@ -1,24 +1,29 @@
 const tags: string[] = [
-  'body',
-  '#DistrictName',
-  '.student-name',
-  '#messageGrid',
-  '#ctl00_ctl00_MainContent_PXPMainContent_ctl00',
-  '#ctl00_ctl00_MainContent_PXPMainContent_ctl08',
-  '#ctl00_ctl00_MainContent_PXPMainContent_ServiceLearningGrid',
-  '#ctl00_ctl00_MainContent_PXPMainContent_ServiceLearningGridDetails',
-  '#ctl00_ctl00_MainContent_PXPMainContent_StaffGrid',
-  '#ctl00_ctl00_MainContent_PXPMainContent_DocumentsGrid',
-  '#AssignmentsGrid',
-  '.dx-texteditor-input',
-  '.dx-button-text',
-  '.dx-item-content',
-  '[data-dx_placeholder]',
+  '#ctl00_ctl00_MainContent_StudentSelector, .pxp-student-picker, .student-name', //id card
+  '#DistrictName, #Greeting', //greetings + district
+  '.pxp-navbar, .pxp-launch-btn-goback', //header system links
+  '.lp-tiles', //launchpad
+  '#side-bar-content, #Actions, #messageGrid .dx-datagrid-pager', //mail
+  '#messageGrid, .messageContent', //mail content
+  '#CalendarContent .uppercase, #CalendarContent .groups, #CalendarContent .cal-header', //calendar
+  '#CalendarContent .cal-month-view, #CalendarContent .cal-week-view, #CalendarContent .cal-day-view, #CalendarContent .cal-filter-panel', //calendar content
+  '#attendance-root, #ctl00_ctl00_MainContent_PXPMainContent_ctl00', //attendance
+  '[action*="ClassSchedule" i] .uppercase, #ctl00_ctl00_MainContent_PXPMainContent_heading_breadcrumb, [data-bind="text: bellSchedName" i], #calendar-button, [action*="ClassSchedule" i] .panel-heading', // schedule
+  '#ctl00_ctl00_MainContent_PXPMainContent_ctl08, .school-info .list-group', //schedule content
+  '#ctl00_ctl00_MainContent_PXPMainContent_CourseHistoryContent, #ctl00_ctl00_MainContent_PXPMainContent_ServiceLearningGrid, #ctl00_ctl00_MainContent_PXPMainContent_ServiceLearningGridDetails, ctl00_ctl00_MainContent_PXPMainContent_ServiceLearningGridDetails .dx-datagrid-pager', //course history
+  '#GradebookHeader, #ctl00_ctl00_MainContent_PXPMainContent_CourseContentHeaderLink, [action*="GradeBook" i] .dx-texteditor-input, .dx-button-text, [action*="GradeBook" i] .dx-item-content, [action*="GradeBook" i] .dx-placeholder, .gb-class-header, ctl00_ctl00_MainContent_PXPMainContent_repSchoolClasses_ctl00_ctl00_TermSelector_TermSelector, #gb-classes .title', // gradebook
+  '.gb-class-row[data-mark-gu], .gb-class-row.details, .outline-box, .items-wrapper, .pxp-course-cards, #assignment-details, #term-weighting-details, #ctl00_CurrentGrade, #AssignmentsGrid', //gradebook content
+  '[action*="ReportCard" i]', //report card
+  '[action*="SchoolInformation" i] .panel-heading, [action*="SchoolInformation" i] .uppercase, #ctl00_ctl00_MainContent_PXPMainContent_StaffGrid .dx-datagrid-pager', //school info
+  '#ctl00_ctl00_MainContent_PXPMainContent_StaffGrid, [action*="SchoolInformation" i] .panel-body', //school info content
+  '', //student
+  '[action*="Documents" i] .uppercase, [action*="Documents" i] .panel-heading, #ctl00_ctl00_MainContent_PXPMainContent_DocumentsGrid .dx-datagrid-pager', //doc
+  '#ctl00_ctl00_MainContent_PXPMainContent_DocumentsGrid', //doc content
+  '#ctl00_ctl00_PXPFooter', //footer
 ];
 
 export const initFont = () => {
   const fontUrl = chrome.runtime.getURL('fonts/MinecraftRegular.otf');
-  const imageUrl = chrome.runtime.getURL('icon-128.png');
 
   const style = document.createElement('style');
   style.id = 'REVUEREVUEREVUE';
@@ -29,10 +34,6 @@ export const initFont = () => {
       font-weight: normal;
       font-style: normal;
       font-display: swap;
-    }
-
-    body {
-      background-image: url("${imageUrl}") !important;
     }
   `;
 

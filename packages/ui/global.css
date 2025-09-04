@@ -26,3 +26,17 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+#maincontent {
+  @apply bg-red-50;
+  background-color: unset !important;
+}
+
+#ctl00_ctl00_MainContent_StudentSelectorPlaceholder {
+  min-height: unset !important;
+}
+
+#ctl00_ctl00_MainContent_PXPHeader {
+  padding: 4rem;
+  background-color: white !important;
+}

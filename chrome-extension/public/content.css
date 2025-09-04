@@ -2,16 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-#maincontent {
+/* #maincontent {
   background-color: unset !important;
 }
 
@@ -22,4 +14,4 @@ body {
 #ctl00_ctl00_MainContent_PXPHeader {
   padding: 4rem;
   background-color: white !important;
-}
+} */
