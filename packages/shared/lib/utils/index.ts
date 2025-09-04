@@ -6,4 +6,5 @@ export * from './districts.js';
 export * from './short-circuit.js';
 export * from './image-convert.js';
 export * from './init-css.js';
+export * from './tags.js';
 export type * from './types.js';
