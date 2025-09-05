@@ -4,11 +4,6 @@ export const districts: {
   url: string;
 }[] = [
   {
-    url: 'https://az-acce.edupoint.com/',
-    address: 'Cottonwood AZ 86326',
-    name: 'A Center for Creative Education',
-  },
-  {
     url: 'https://az-alc.edupoint.com/',
     address: 'Phoenix AZ 85028',
     name: 'Accelerated Learning Center',

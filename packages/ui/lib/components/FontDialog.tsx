@@ -21,7 +21,7 @@ export const FontDialog = () => {
         <DialogHeader>
           <DialogTitle>Font Settings</DialogTitle>
           <DialogDescription>
-            Decide where your Synergy Fonts are updated. Changes are automatically saved.
+            Decide which Synergy Fonts are updated. Changes are automatically saved.
           </DialogDescription>
         </DialogHeader>
         <div className="grid gap-4">
