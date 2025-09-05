@@ -1,5 +1,6 @@
-export * from './LoadingSpinner';
+export * from './FontDialog';
 export * from './DistrictSelect';
+export * from './LoadingSpinner';
 export * from './error-display/ErrorDisplay';
 export * from './ui/command';
 export * from './ui/dialog';

@@ -30,7 +30,7 @@ export const DistrictSelect = () => {
   };
 
   return (
-    <>
+    <div className="flex w-full justify-center gap-4">
       <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger asChild>
           <Button variant="outline" role="combobox" aria-expanded={open} className="w-[260px] justify-between">
@@ -72,6 +72,6 @@ export const DistrictSelect = () => {
         }}>
         <LuHouse />
       </Button>
-    </>
+    </div>
   );
 };
