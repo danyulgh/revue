@@ -5,7 +5,7 @@ export const initFont = () => {
   const secondaryFont = chrome.runtime.getURL('fonts/Figtree-VariableFont.ttf');
 
   const style = document.createElement('style');
-  style.id = 'REVUEREVUEREVUE';
+  style.id = 'revue_extension_fonts';
   style.textContent = `
     @font-face {
       font-family: "Primary";

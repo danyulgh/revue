@@ -15,7 +15,7 @@ export const FontDialog = () => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline">Open Dialog</Button>
+        <Button variant="outline">Font Settings</Button>
       </DialogTrigger>
       <DialogContent className="w-[95%] rounded-md">
         <DialogHeader>
