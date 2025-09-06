@@ -1,3 +1,4 @@
+import { PageSelect } from './PageSelect';
 import { FontSelect } from '@/lib/components/FontSelect';
 import { Button } from '@/lib/components/ui/button';
 import {
@@ -9,9 +10,12 @@ import {
   DialogTrigger,
 } from '@/lib/components/ui/dialog';
 import { Label } from '@/lib/components/ui/label';
+import { Tabs, TabsContent } from '@/lib/components/ui/tabs';
+import { fontTags } from '@extension/shared';
 import { useState } from 'react';
 
 export const FontDialog = () => {
+  const [page, setPage] = useState('All');
   const [primaryFont, setPrimaryFont] = useState('');
   const [secondaryFont, setSecondaryFont] = useState('');
 
@@ -28,15 +32,26 @@ export const FontDialog = () => {
           </DialogDescription>
         </DialogHeader>
         <div className="grid gap-4">
-          <div className="grid gap-3">
-            <Label htmlFor="name-1">Name</Label>
-            <FontSelect placeholder="Primary Font" selectedValue={primaryFont} setSelectedValue={setPrimaryFont} />
-            <FontSelect
-              placeholder="Secondary Font"
-              selectedValue={secondaryFont}
-              setSelectedValue={setSecondaryFont}
-            />
-          </div>
+          <PageSelect page={page} setPage={setPage} />
+          <Tabs value={page} onValueChange={setPage}>
+            {fontTags.map(page => (
+              <TabsContent value={page.name}>
+                <div className="border-border grid gap-3 rounded-md border p-3">
+                  <Label>{page.name} Font Settings</Label>
+                  <FontSelect
+                    placeholder="Primary Font"
+                    selectedValue={primaryFont}
+                    setSelectedValue={setPrimaryFont}
+                  />
+                  <FontSelect
+                    placeholder="Secondary Font"
+                    selectedValue={secondaryFont}
+                    setSelectedValue={setSecondaryFont}
+                  />
+                </div>
+              </TabsContent>
+            ))}
+          </Tabs>
         </div>
       </DialogContent>
     </Dialog>

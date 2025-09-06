@@ -9,11 +9,7 @@ export const fontTags: {
   },
   {
     name: 'Header',
-    primary: '#DistrictName, #Greeting, .alert',
-  },
-  {
-    name: 'System Links',
-    primary: '.pxp-navbar, .pxp-launch-btn-goback',
+    primary: '#DistrictName, #Greeting, .alert .pxp-navbar, .pxp-launch-btn-goback',
   },
   {
     name: 'Home',
@@ -49,7 +45,7 @@ export const fontTags: {
       '#ctl00_ctl00_MainContent_PXPMainContent_CourseHistoryContent h1:has(.pxp-switch), #ctl00_ctl00_MainContent_PXPMainContent_CourseHistoryContent .panel-heading, #ctl00_ctl00_MainContent_PXPMainContent_ServiceLearningGridDetails .dx-datagrid-pager, .chs-course-history-filter, #ctl00_ctl00_MainContent_PXPMainContent_CourseHistoryContent [data-action="CloseSummaryDetails" i], #ctl00_ctl00_MainContent_PXPMainContent_CourseHistoryContent .subtitle',
   },
   {
-    name: 'Gradebook',
+    name: 'Grade Book',
     primary:
       '.gb-class-row[data-mark-gu], .gb-class-row.details, .outline-box, .items-wrapper, .pxp-course-cards, #assignment-details, #term-weighting-details, #ctl00_CurrentGrade, #AssignmentsGrid',
     secondary:
