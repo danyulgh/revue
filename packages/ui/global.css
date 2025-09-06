@@ -33,6 +33,14 @@
   }
 }
 
+@font-face {
+  font-family: "Ubuntu";
+  src: url("/fonts/Ubuntu-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   @apply bg-background;
 
@@ -40,7 +48,7 @@ body {
   padding: 0;
   box-sizing: border-box;
 
-  font-family: 'Ubuntu' !important;
+  font-family: 'Ubuntu', 'Arial' !important;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

@@ -12,7 +12,7 @@ const fontSuffixes: {
   },
 ];
 
-export const fontType = ({ file }: { file: string }) => fontSuffixes.find(suffix => file.endsWith(suffix.suffix))?.type;
+export const fontType = (file: string) => fontSuffixes.find(suffix => file.endsWith(suffix.suffix))?.type;
 
 export const fonts: {
   name: string;
@@ -24,10 +24,18 @@ export const fonts: {
   },
   {
     name: 'Minecraft',
-    file: 'MinecraftRegular.otf',
+    file: 'Minecraft.otf',
   },
   {
     name: 'Papyrus',
     file: 'Papyrus.ttf',
+  },
+  {
+    name: 'Ubuntu',
+    file: 'Ubuntu-Regular.ttf',
+  },
+  {
+    name: 'Black Ops One',
+    file: 'BlackOpsOne-Regular.ttf',
   },
 ];
