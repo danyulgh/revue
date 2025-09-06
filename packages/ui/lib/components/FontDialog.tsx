@@ -36,18 +36,23 @@ export const FontDialog = () => {
           <Tabs value={page} onValueChange={setPage}>
             {fontTags.map(page => (
               <TabsContent value={page.name}>
-                <div className="border-border grid gap-3 rounded-md border p-3">
-                  <Label>{page.name} Font Settings</Label>
-                  <FontSelect
-                    placeholder="Primary Font"
-                    selectedValue={primaryFont}
-                    setSelectedValue={setPrimaryFont}
-                  />
-                  <FontSelect
-                    placeholder="Secondary Font"
-                    selectedValue={secondaryFont}
-                    setSelectedValue={setSecondaryFont}
-                  />
+                <div className="border-border flex flex-row gap-3 rounded-md border p-3">
+                  <div className="grid gap-3">
+                    <Label className="text-center">{page.name} Font Settings</Label>
+                    <FontSelect
+                      placeholder="Primary Font"
+                      selectedValue={primaryFont}
+                      setSelectedValue={setPrimaryFont}
+                    />
+                    {page.secondary && (
+                      <FontSelect
+                        placeholder="Secondary Font"
+                        selectedValue={secondaryFont}
+                        setSelectedValue={setSecondaryFont}
+                      />
+                    )}
+                  </div>
+                  <div>test</div>
                 </div>
               </TabsContent>
             ))}
