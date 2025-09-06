@@ -1,12 +1,12 @@
 import { fonts, fontType } from './fonts.js';
 import { fontTags } from './tags.js';
 
-export const initFont = (fontName: string) => {
-  document.getElementById('revue_extension_fonts')?.remove();
+export const initFontFaces = () => {
+  document.getElementById('revue_extension_fontsfaces')?.remove();
   const style = document.createElement('style');
-  style.id = 'revue_extension_fonts';
-
+  style.id = 'revue_extension_fontsfaces';
   for (const font of fonts) {
+    if (!font.file) continue;
     const url = chrome.runtime.getURL(`fonts/${font.file}`);
     style.textContent += `
       @font-face {
@@ -18,20 +18,25 @@ export const initFont = (fontName: string) => {
       }
     `;
   }
+  document.head.appendChild(style);
+};
+
+export const initFont = (fontName: string) => {
+  document.getElementById('revue_extension_fonts')?.remove();
+  const style = document.createElement('style');
+  style.id = 'revue_extension_fonts';
 
   for (const tag of fontTags) {
     style.textContent += `
       ${tag.primary} {
-        font-family: ${tag.secondary ? 'Ubuntu' : `${fontName}`}, 'Arial', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
+        font-family: ${tag.secondary ? 'Ubuntu' : fontName} !important;
       }
     `;
     if (tag.secondary)
       style.textContent += `
         ${tag.secondary} {
-          font-family: '${fontName}', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
+          font-family: ${fontName} !important;
         }
       `;
   }
-
-  document.head.appendChild(style);
 };

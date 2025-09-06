@@ -16,8 +16,23 @@ export const fontType = (file: string) => fontSuffixes.find(suffix => file.endsW
 
 export const fonts: {
   name: string;
-  file: string;
+  file?: string;
 }[] = [
+  {
+    name: 'Arial',
+  },
+  {
+    name: 'Times New Roman',
+  },
+  {
+    name: 'Courier New',
+  },
+  {
+    name: 'cursive',
+  },
+  {
+    name: 'system-ui',
+  },
   {
     name: 'Figtree',
     file: 'Figtree-VariableFont.ttf',

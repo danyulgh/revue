@@ -8,7 +8,7 @@ export const fontTags: {
     primary: '#ctl00_ctl00_MainContent_StudentSelector, .pxp-student-picker, .student-name',
   },
   {
-    name: 'Greeting',
+    name: 'Header',
     primary: '#DistrictName, #Greeting, .alert',
   },
   {
@@ -31,7 +31,7 @@ export const fontTags: {
     secondary: '#CalendarContent .uppercase, #CalendarContent .groups, #CalendarContent .cal-header',
   },
   {
-    name: 'Attedance',
+    name: 'Attendance',
     primary: '#attendance-root, #ctl00_ctl00_MainContent_PXPMainContent_ctl00',
     secondary: '[action*="Attendance" i] .uppercase',
   },

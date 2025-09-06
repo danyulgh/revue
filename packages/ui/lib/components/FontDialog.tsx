@@ -1,4 +1,4 @@
-/* eslint-disable arrow-body-style */
+import { FontSelect } from '@/lib/components/FontSelect';
 import { Button } from '@/lib/components/ui/button';
 import {
   Dialog,
@@ -8,10 +8,13 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/lib/components/ui/dialog';
-import { Input } from '@/lib/components/ui/input';
 import { Label } from '@/lib/components/ui/label';
+import { useState } from 'react';
 
 export const FontDialog = () => {
+  const [primaryFont, setPrimaryFont] = useState('');
+  const [secondaryFont, setSecondaryFont] = useState('');
+
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -21,17 +24,18 @@ export const FontDialog = () => {
         <DialogHeader>
           <DialogTitle>Font Settings</DialogTitle>
           <DialogDescription>
-            Decide which Synergy Fonts are updated. Changes are automatically saved.
+            Decide where and how Synergy Fonts are updated. Changes are automatically saved.
           </DialogDescription>
         </DialogHeader>
         <div className="grid gap-4">
           <div className="grid gap-3">
             <Label htmlFor="name-1">Name</Label>
-            <Input id="name-1" name="name" defaultValue="Pedro Duarte" />
-          </div>
-          <div className="grid gap-3">
-            <Label htmlFor="username-1">Username</Label>
-            <Input id="username-1" name="username" defaultValue="@peduarte" />
+            <FontSelect placeholder="Primary Font" selectedValue={primaryFont} setSelectedValue={setPrimaryFont} />
+            <FontSelect
+              placeholder="Secondary Font"
+              selectedValue={secondaryFont}
+              setSelectedValue={setSecondaryFont}
+            />
           </div>
         </div>
       </DialogContent>
